@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 // import useToken from '../../hooks/useToken';
 
 const SignUp = () => {
@@ -88,7 +89,7 @@ const SignUp = () => {
                 </form>
                 <p>Already have an account <Link className='text-primary' to="/login">Please Login</Link></p>
                 <div className="divider">OR</div>
-                <button className='btn btn-outline w-full'>CONTINUE WITH GOOGLE</button>
+                <SocialLogin></SocialLogin>
 
             </div>
         </div>
