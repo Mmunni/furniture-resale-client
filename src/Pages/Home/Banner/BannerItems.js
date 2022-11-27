@@ -8,12 +8,12 @@ const BannerItems = ({slide}) => {
         <img src={image} className="w-full" />
         </div>
         <div className="absolute flex justify-start inset-x-1/4  top-1/3 ">
-         <p className=' text-2xl font-bold text-white'>
+         <p className='text-xl lg:text-2xl font-bold text-white'>
             Collection 2022
          </p>
         </div>
         <div className="absolute flex  inset-x-1/4  top-1/2 mb-10">
-          <h1 className=' text-5xl mb-12 lg:mb-8  font-semibold text-white '>
+          <h1 className='text-2xl lg:text-5xl mb-12 lg:mb-8  font-semibold text-white '>
           We provide <br/>
            Best Furniture in town
           </h1>
