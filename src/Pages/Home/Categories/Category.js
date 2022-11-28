@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Category = ({category}) => {
-    const {name, description, img } = category;
+    const {name, img } = category;
     console.log(category)
     return (
         <div className="card bg-base-100 shadow-xl">
@@ -9,8 +9,8 @@ const Category = ({category}) => {
                 <img src={img} alt="Shoes" className="rounded-xl" />
             </figure>
             <div className="card-body items-center text-center">
-                <h2 className="card-title">{name}</h2>
-                <p>{description}</p>
+                <h1 className="card-title">{name}</h1>
+                
             </div>
         </div>
     );

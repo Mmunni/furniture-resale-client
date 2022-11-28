@@ -9,19 +9,16 @@ const Categories = () => {
         {
             _id: 1,
             name: 'LivingRoom Furniture',
-            description: 'Lorem Ipsum is simply dummy printing and typesetting indust Ipsum has been the',
             img:livingRoom
         },
         {
             _id: 2,
             name: 'BedRoom Furniture',
-            description: 'Lorem Ipsum is simply dummy printing and typesetting indust Ipsum has been the',
             img:bedRoom
         },
         {
             _id: 3,
             name: 'DinningRoom Furniture',
-            description: 'Lorem Ipsum is simply dummy printing and typesetting indust Ipsum has been the',
             img:dinningRoom
         },
     ]
