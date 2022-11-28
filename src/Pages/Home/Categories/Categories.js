@@ -1,28 +1,8 @@
 import React, { useEffect } from 'react';
 import Category from './Category';
-import livingRoom from '../../../asstes/categories/livingRoom.avif';
-import bedRoom from '../../../asstes/categories/bedroom1.avif';
-import dinningRoom from '../../../asstes/categories/dinningRoom.jpg';
 import { useLoaderData } from 'react-router-dom';
 
 const Categories = () => {
-    // const categoriesData = [
-    //     {
-    //         id: 1,
-    //         name: 'LivingRoom Furniture',
-    //         img:livingRoom
-    //     },
-    //     {
-    //         id: 2,
-    //         name: 'BedRoom Furniture',
-    //         img:bedRoom
-    //     },
-    //     {
-    //         id: 3,
-    //         name: 'DinningRoom Furniture',
-    //         img:dinningRoom
-    //     },
-    // ]
     const categories = useLoaderData();
 
     return (

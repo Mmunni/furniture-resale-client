@@ -1,15 +1,111 @@
 [
     {
-    
-        "category_id":"o1",
+        "category_id":"01",
         "name":"Bed",
         "product_condition":"Good",
         "original_price":"16000",
         "resale_price":"10000",
-        "used_years":"2",
+        "used_years":"1 year",
         "location":"Dhaka",
-        "img":"https://i.ibb.co/T2cpBd5/888.jpg",
+        "seller's_name": "Shakila",
+        "img":"https://i.ibb.co/DK1qPSZ/2f4bd93e6785c4ffe4223917e8cb5d23.jpg",
         "id":"01"
-          }
+    },
+    {
+        "category_id":"01",
+        "name":"Wardrobe",
+        "product_condition":"Fine",
+        "original_price":"12000",
+        "resale_price":"8000",
+        "used_years":"1.5 year",
+        "location":"Sylhet",
+        "seller's_name": "Shimu",
+        "img":"https://i.ibb.co/Cz9VZZd/wooden-wardrobe-hwdh-314.jpg",
+        "id":"01"
+    },
+    {
+        "category_id":"01",
+        "name":"Dressing Table",
+        "product_condition":"Good",
+        "original_price":"10000",
+        "resale_price":"6000",
+        "used_years":"2 year",
+        "location":"Dhaka",
+        "seller's_name": "Shakila",
+        "img":"https://i.ibb.co/wzLwjRm/wooden-dressing-table-hdth-306.jpg",
+        "id":"01"
+    },
+    {
+        "category_id":"02",
+        "name":"Sofa",
+        "product_condition":"Fine",
+        "original_price":"20000",
+        "resale_price":"15000",
+        "used_years":"2 years",
+        "location":"Noakhali",
+        "seller's_name": "Afsar",
+        "img":"https://i.ibb.co/5GKNdhg/wooden-sofa-set-hsdc-342-hssc-342.jpg",
+        "id":"02"
+    },
+    {
+        "category_id":"02",
+        "name":"Sofacum Bed",
+        "product_condition":"Good",
+        "original_price":"10000",
+        "resale_price":"7000",
+        "used_years":"5 month",
+        "location":"Rangpur",
+        "seller's_name": "Sultana",
+        "img":"https://i.ibb.co/K9McL1Q/5d5256433f64dbc1ccf712e677a35742.jpg",
+        "id":"02"
+    },
+    {
+        "category_id":"02",
+        "name":"Book Shelf",
+        "product_condition":"Good",
+        "original_price":"16000",
+        "resale_price":"10000",
+        "used_years":"2.5 year",
+        "location":"Dhaka",
+        "seller's_name": "Bappi",
+        "img":"https://i.ibb.co/LxDPb1C/data-book-shelves-cagney-bookshelf-revised-honey-front-574x396.jpg",
+        "id":"02"
+    },
+    {
+        "category_id":"03",
+        "name":"Table",
+        "product_condition":"fine",
+        "original_price":"12000",
+        "resale_price":"7000",
+        "used_years":"1 year",
+        "location":"Saver",
+        "seller's_name": "Sufian",
+        "img":"https://i.ibb.co/GkgMH5q/dining-table-perspectivergbcolor.jpg",
+        "id":"03"
+    },
+    {
+        "category_id":"03",
+        "name":"Chair",
+        "product_condition":"Good",
+        "original_price":"8000",
+        "resale_price":"4000",
+        "used_years":"1",
+        "location":"Dhaka",
+        "seller's_name": "Shuvon",
+        "img":"https://i.ibb.co/4fywLs3/250-Brady-Graphite-Honey-1.jpg",
+        "id":"03"
+    },
+    {
+        "category_id":"03",
+        "name":"Cabinet",
+        "product_condition":"Good",
+        "original_price":"16000",
+        "resale_price":"10000",
+        "used_years":"1",
+        "location":"Dhaka",
+        "seller's_name": "Shakila",
+        "img":"https://i.ibb.co/DDLFGdZ/Mocka-Savannah-Two-Door-1-24753-1.jpg",
+        "id":"03"
+    }
         
 ]
