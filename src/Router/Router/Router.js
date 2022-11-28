@@ -7,6 +7,10 @@ import SignUp from "../../Pages/SignUp/SignUp";
 import DisplayError from "../../Pages/Shared/DisplayError/DisplayError";
 import Products from "../../Pages/Products/Products";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import DashboardLayout from "../../layouts/DashboardLayout";
+import MyAppointment from "../../Pages/DashBoard/MyAppointment/MyAppointment";
+import AllUsers from "../../Pages/DashBoard/AllUsers/AllUsers";
+import AdminRoute from "../AdminRoute/AdminRoute";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +41,26 @@ const router = createBrowserRouter([
                 path: '/signup',
                 element: <SignUp></SignUp>
             },
+        ]
+    },
+    {
+        path: '/dashboard',
+        element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
+        errorElement: <DisplayError></DisplayError>,
+        children: [
+            {
+                path: '/dashboard',
+                element: <MyAppointment></MyAppointment>
+            },
+            {
+                path: '/dashboard/allusers',
+                element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+            },
+            // {
+            //     path: '/dashboard/payment/:id',
+            //     element: <AdminRoute><Payment></Payment></AdminRoute>,
+            //     loader: ({params}) => fetch(`http://localhost:5000/bookings/${params.id}`)
+            // },
         ]
     },
     {

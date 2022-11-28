@@ -2,7 +2,8 @@ import React, { useContext } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthProvider';
 import useAdmin from '../hooks/useAdmin';
-import Header from '../pages/Shared/Header/Header';
+import Header from '../Pages/Shared/Header/Header';
+
 
 const DashboardLayout = () => {
 
