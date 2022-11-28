@@ -13,12 +13,12 @@ const SignUp = () => {
     const [signUpError, setSignUPError] = useState('');
     const [createdUserEmail, setCreatedUserEmail] = useState('')
     useTitle('SignUp')
-    // const [token] = useToken(createdUserEmail);
+     const [token] = useToken(createdUserEmail);
     const navigate = useNavigate();
 
-    // if(token){
-    //     navigate('/');
-    // }
+    if(token){
+        navigate('/');
+    }
 
     const handleSignUp = (data) => {
         setSignUPError('');
