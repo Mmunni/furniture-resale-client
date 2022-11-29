@@ -43,7 +43,7 @@ const AddAProduct = () => {
                 }
 
                 // save doctor information to the database
-                fetch('http://localhost:5000/doctors', {
+                fetch('http://localhost:5000/doctor', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json', 
@@ -55,7 +55,7 @@ const AddAProduct = () => {
                 .then(result =>{
                     console.log(result);
                     toast.success(`${data.name} is added successfully`);
-                    navigate('/dashboard/managedoctors')
+                    navigate('/dashboard/myproduct')
                 })
             }
         })
@@ -67,36 +67,71 @@ const AddAProduct = () => {
 
     return (
         <div className='w-96 p-7'>
-            <h2 className="text-4xl">Add A Doctor</h2>
+            <h2 className="text-4xl">Add A Product</h2>
             <form onSubmit={handleSubmit(handleAddDoctor)}>
                 <div className="form-control w-full max-w-xs">
-                    <label className="label"> <span className="label-text">Name</span></label>
+                    <label className="label"> <span className="label-text">Product Name</span></label>
                     <input type="text" {...register("name", {
                         required: "Name is Required"
                     })} className="input input-bordered w-full max-w-xs" />
                     {errors.name && <p className='text-red-500'>{errors.name.message}</p>}
                 </div>
                 <div className="form-control w-full max-w-xs">
+                    <label className="label"> <span className="label-text">Price</span></label>
+                    <input type="number" {...register("price", {
+                        required: "Name is Required"
+                    })} className="input input-bordered w-full max-w-xs" />
+                    {errors.name && <p className='text-red-500'>{errors.name.message}</p>}
+                </div>
+                <div className="form-control w-full max-w-xs">
+                    <label className="label"> <span className="label-text">Condition type</span></label>
+                    <input type="text" {...register("codition", {
+                        required: "Name is Required"
+                    })} className="input input-bordered w-full max-w-xs" />
+                    {errors.name && <p className='text-red-500'>{errors.name.message}</p>}
+                </div>
+                <div className="form-control w-full max-w-xs">
+                    <label className="label"> <span className="label-text">Location</span></label>
+                    <input type="text" {...register("location", {
+                        required: "Name is Required"
+                    })} className="input input-bordered w-full max-w-xs" />
+                    {errors.name && <p className='text-red-500'>{errors.name.message}</p>}
+                </div>
+                {/* <div className="form-control w-full max-w-xs">
                     <label className="label"> <span className="label-text">Email</span></label>
                     <input type="email" {...register("email", {
                         required: true
                     })} className="input input-bordered w-full max-w-xs" />
                     {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
-                </div>
+                </div> */}
                 <div className="form-control w-full max-w-xs">
-                    <label className="label"> <span className="label-text">Specialty</span></label>
-                    <select 
-                    {...register('specialty')}
-                    className="select input-bordered w-full max-w-xs">
+                    <label className="label"> <span className="label-text">Category</span></label>
+                    <select
+                        {...register('specialty')}
+                        className="select input-bordered w-full max-w-xs">
                         {
                             specialties.map(specialty => <option
                                 key={specialty._id}
                                 value={specialty.name}
                             >{specialty.name}</option>)
                         }
-                        
-                        
+
+
                     </select>
+                </div>
+                <div className="form-control w-full max-w-xs">
+                    <label className="label"> <span className="label-text">Description</span></label>
+                    <input type="text" {...register("description", {
+                        required: "Name is Required"
+                    })} className="input input-bordered w-full max-w-xs" />
+                    {errors.name && <p className='text-red-500'>{errors.name.message}</p>}
+                </div>
+                <div className="form-control w-full max-w-xs">
+                    <label className="label"> <span className="label-text">Year of purchase </span></label>
+                    <input type="text" {...register("year of purchase", {
+                        required: "Name is Required"
+                    })} className="input input-bordered w-full max-w-xs" />
+                    {errors.name && <p className='text-red-500'>{errors.name.message}</p>}
                 </div>
                 <div className="form-control w-full max-w-xs">
                     <label className="label"> <span className="label-text">Photo</span></label>

@@ -13,6 +13,7 @@ import AllUsers from "../../Pages/DashBoard/AllUsers/AllUsers";
 import AdminRoute from "../AdminRoute/AdminRoute";
 import Payment from "../../Pages/DashBoard/Payment/Payment";
 import AddAProduct from "../../Pages/DashBoard/AddAProduct/AddAProduct";
+import MyProduct from "../../Pages/DashBoard/MyProduct/MyProduct";
 
 const router = createBrowserRouter([
     {
@@ -64,7 +65,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/dashboard/myproduct',
-                element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+                element: <AdminRoute><MyProduct></MyProduct></AdminRoute>
             },
             {
                 path: '/dashboard/payment/:id',

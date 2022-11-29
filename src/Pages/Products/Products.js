@@ -20,6 +20,7 @@ const Products = () => {
                         key={product._id}
                         product={product}
                         setItem={setItem}
+                        selectedDate={selectedDate}
                     ></Product>)
                 }
             </div>

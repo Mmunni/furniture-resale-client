@@ -62,12 +62,12 @@ const Login = () => {
                         <label className="label"> <span className="label-text">Forget Password?</span></label>
                         {errors.password && <p className='text-red-600'>{errors.password?.message}</p>}
                     </div>
-                    <input className='btn btn-accent w-full' value="Login" type="submit" />
+                    <input className='btn btn-primary w-full' value="Login" type="submit" />
                     <div>
                         {loginError && <p className='text-red-600'>{loginError}</p>}
                     </div>
                 </form>
-                <p>New to Doctors Portal <Link className='text-secondary' to="/signup">Create new Account</Link></p>
+                <p>New to Doctors Portal <Link className='text-primary' to="/signup">Create new Account</Link></p>
                 <div className="divider">OR</div>
                 <SocialLogin></SocialLogin>
             </div>

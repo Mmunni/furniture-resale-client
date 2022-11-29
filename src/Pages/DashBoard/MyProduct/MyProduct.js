@@ -30,21 +30,21 @@ const MyProduct = () => {
         }
     });
 
-    
+
     const handleDeleteDoctor = doctor => {
         fetch(`http://localhost:5000/doctors/${doctor._id}`, {
-            method: 'DELETE', 
+            method: 'DELETE',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
             }
         })
-        .then(res => res.json())
-        .then(data => {
-            if(data.deletedCount > 0){
-                refetch();
-                toast.success(`Doctor ${doctor.name} deleted successfully`)
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    refetch();
+                    toast.success(`Doctor ${doctor.name} deleted successfully`)
+                }
+            })
     }
 
     if (isLoading) {
@@ -90,10 +90,10 @@ const MyProduct = () => {
                 deletingDoctor && <ConfirmationModal
                     title={`Are you sure you want to delete?`}
                     message={`If you delete ${deletingDoctor.name}. It cannot be undone.`}
-                    successAction = {handleDeleteDoctor}
+                    successAction={handleDeleteDoctor}
                     successButtonName="Delete"
-                    modalData = {deletingDoctor}
-                    closeModal = {closeModal}
+                    modalData={deletingDoctor}
+                    closeModal={closeModal}
                 >
                 </ConfirmationModal>
             }

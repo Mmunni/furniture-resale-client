@@ -1,4 +1,5 @@
-import React from "react";
+import { format } from "date-fns";
+import React, { useState } from "react";
 
 const Product = ({ product, setItem }) => {
   const {
@@ -11,6 +12,8 @@ const Product = ({ product, setItem }) => {
     location,
     id,
   } = product;
+  const [selectedDate, setSelectedDate] = useState(new Date());
+    const date = format(selectedDate, 'PP');
   return (
     <div>
       <div className="card bg-base-100 shadow-xl">
@@ -27,6 +30,9 @@ const Product = ({ product, setItem }) => {
           </p>
           <p>
             <span className="font-bold">Used:</span> {used_years}
+          </p>
+          <p>
+            <span className="font-bold">Time of posting:</span> {date}
           </p>
           <p>
             <span className="font-bold">Seller Name: </span>
