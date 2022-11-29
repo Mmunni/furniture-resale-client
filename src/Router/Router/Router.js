@@ -12,6 +12,7 @@ import MyAppointment from "../../Pages/DashBoard/MyAppointment/MyAppointment";
 import AllUsers from "../../Pages/DashBoard/AllUsers/AllUsers";
 import AdminRoute from "../AdminRoute/AdminRoute";
 import Payment from "../../Pages/DashBoard/Payment/Payment";
+import AddAProduct from "../../Pages/DashBoard/AddAProduct/AddAProduct";
 
 const router = createBrowserRouter([
     {
@@ -54,7 +55,15 @@ const router = createBrowserRouter([
                 element: <MyAppointment></MyAppointment>
             },
             {
-                path: '/dashboard/allusers',
+                path: '/dashboard/allseller',
+                element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+            },
+            {
+                path: '/dashboard/addaproduct',
+                element: <AdminRoute><AddAProduct></AddAProduct></AdminRoute>
+            },
+            {
+                path: '/dashboard/myproduct',
                 element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
             },
             {
