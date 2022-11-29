@@ -23,12 +23,12 @@ const router = createBrowserRouter([
         children:[
             {
                 path: '/',
-                loader: () => fetch('http://localhost:5000/categories'),
+                loader: () => fetch('https://furniture-resale-server-two.vercel.app/categories'),
                 element: <Home></Home>,
             },
             {
                 path: '/categories/:id',
-                loader: ({params}) => fetch(`http://localhost:5000/categories/${params.id}`),
+                loader: ({params}) => fetch(`https://furniture-resale-server-two.vercel.app/categories/${params.id}`),
                 element: <PrivateRoute><Products></Products></PrivateRoute>,
             },
             
@@ -70,7 +70,7 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/payment/:id',
                 element: <AdminRoute><Payment></Payment></AdminRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/bookings/${params.id}`)
+                loader: ({params}) => fetch(`https://furniture-resale-server-two.vercel.app/bookings/${params.id}`)
             },
         ]
     },
