@@ -43,7 +43,7 @@ const AddAProduct = () => {
                 }
 
                 // save doctor information to the database
-                fetch('https://furniture-resale-server-two.vercel.app/doctor', {
+                fetch('https://furniture-resale-server-two.vercel.app/doctors', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json', 
