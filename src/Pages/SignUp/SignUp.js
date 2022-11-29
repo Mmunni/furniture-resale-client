@@ -12,9 +12,9 @@ const SignUp = () => {
     const { createUser, updateUser } = useContext(AuthContext);
     const [signUpError, setSignUPError] = useState('');
     const [createdUserEmail, setCreatedUserEmail] = useState('')
-    useTitle('SignUp')
-     const [token] = useToken(createdUserEmail);
+    const [token] = useToken(createdUserEmail);
     const navigate = useNavigate();
+    useTitle('signUp')
 
     if(token){
         navigate('/');
@@ -32,7 +32,8 @@ const SignUp = () => {
                 }
                 updateUser(userInfo)
                     .then(() => {
-                         saveUser(data.name, data.email);
+                        saveUser(data.name, data.email);
+                         navigate('/');
                     })
                     .catch(err => console.log(err));
             })
@@ -56,6 +57,7 @@ const SignUp = () => {
             setCreatedUserEmail(email);
         })
     }
+
 
 
     return (

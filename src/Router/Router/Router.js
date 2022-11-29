@@ -11,6 +11,7 @@ import DashboardLayout from "../../layouts/DashboardLayout";
 import MyAppointment from "../../Pages/DashBoard/MyAppointment/MyAppointment";
 import AllUsers from "../../Pages/DashBoard/AllUsers/AllUsers";
 import AdminRoute from "../AdminRoute/AdminRoute";
+import Payment from "../../Pages/DashBoard/Payment/Payment";
 
 const router = createBrowserRouter([
     {
@@ -56,11 +57,11 @@ const router = createBrowserRouter([
                 path: '/dashboard/allusers',
                 element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
             },
-            // {
-            //     path: '/dashboard/payment/:id',
-            //     element: <AdminRoute><Payment></Payment></AdminRoute>,
-            //     loader: ({params}) => fetch(`http://localhost:5000/bookings/${params.id}`)
-            // },
+            {
+                path: '/dashboard/payment/:id',
+                element: <AdminRoute><Payment></Payment></AdminRoute>,
+                loader: ({params}) => fetch(`http://localhost:5000/bookings/${params.id}`)
+            },
         ]
     },
     {

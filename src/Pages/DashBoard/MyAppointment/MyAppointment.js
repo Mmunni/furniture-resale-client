@@ -29,10 +29,9 @@ const MyAppointment = () => {
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Name</th>
                             <th>Category</th>
                             <th>Date</th>
-                            <th>Time</th>
+                            <th>Location</th>
                             <th>Payment</th>
                         </tr>
                     </thead>
@@ -42,9 +41,8 @@ const MyAppointment = () => {
                             bookings?.map((booking, i) => <tr key={booking._id}>
                                 <th>{i + 1}</th>
                                 <td>{booking.name}</td>
-                                <td>{booking.category}</td>
                                 <td>{booking.appointmentDate}</td>
-                                <td>{booking.slot}</td>
+                                <td>{booking.location}</td>
                                 <td>
                                     {
                                         booking.price && !booking.paid && <Link

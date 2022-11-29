@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import BookingModal from '../Modal/BookingModal/BookingModal';
+import Loading from '../Shared/Loading/Loading';
 import Product from './Product';
 
 const Products = () => {
@@ -16,7 +17,7 @@ const Products = () => {
             <div className='grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 {
                     products.map(product => <Product
-                        key={product.id}
+                        key={product._id}
                         product={product}
                         setItem={setItem}
                     ></Product>)
@@ -28,7 +29,6 @@ const Products = () => {
                     selectedDate={selectedDate}
                     item={item}
                     setItem={setItem}
-                    // refetch={refetch}
                 ></BookingModal>
             }
         </div>

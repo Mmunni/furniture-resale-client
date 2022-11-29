@@ -3,18 +3,18 @@ import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
 import useTitle from '../../hooks/useTitle';
+import useToken from '../../hooks/useToken';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
- import useToken from '../../hooks/useToken';
 
 const Login = () => {
+    useTitle('login');
     const { register, formState: { errors }, handleSubmit } = useForm();
     const { signIn } = useContext(AuthContext);
     const [loginError, setLoginError] = useState('');
     const [loginUserEmail, setLoginUserEmail] = useState('');
-     const [token] = useToken(loginUserEmail);
+    const [token] = useToken(loginUserEmail);
     const location = useLocation();
     const navigate = useNavigate();
-    useTitle('Login')
 
     const from = location.state?.from?.pathname || '/';
 
@@ -40,7 +40,7 @@ const Login = () => {
     return (
         <div className='h-[800px] flex justify-center items-center'>
             <div className='w-96 p-7'>
-                <h2 className='text-2xl text-center'>Login</h2>
+                <h2 className='text-xl text-center'>Login</h2>
                 <form onSubmit={handleSubmit(handleLogin)}>
                     <div className="form-control w-full max-w-xs">
                         <label className="label"> <span className="label-text">Email</span></label>
@@ -62,12 +62,12 @@ const Login = () => {
                         <label className="label"> <span className="label-text">Forget Password?</span></label>
                         {errors.password && <p className='text-red-600'>{errors.password?.message}</p>}
                     </div>
-                    <input className='btn btn-primary w-full' value="Login" type="submit" />
+                    <input className='btn btn-accent w-full' value="Login" type="submit" />
                     <div>
                         {loginError && <p className='text-red-600'>{loginError}</p>}
                     </div>
                 </form>
-                <p>New to Asbab Furniture <Link className='text-primary' to="/signup">Create new Account</Link></p>
+                <p>New to Doctors Portal <Link className='text-secondary' to="/signup">Create new Account</Link></p>
                 <div className="divider">OR</div>
                 <SocialLogin></SocialLogin>
             </div>
