@@ -62,7 +62,7 @@ const MyProduct = () => {
                             <th>Avatar</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Specialty</th>
+                            <th>Category</th>
                             <th>Action</th>
                         </tr>
                     </thead>
